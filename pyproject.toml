@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mapmatch"
+version = "1.0.0"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.pyright]
+include = ["src"]
+strict = ["src"]
+pythonVersion = "3.13"
+
+[tool.hatch.build.targets.wheel]
+    packages = ["src/mapmatch"]
